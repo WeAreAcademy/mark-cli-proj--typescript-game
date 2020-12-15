@@ -1,4 +1,5 @@
 import { question as prompt } from 'readline-sync'
+import wantsToPlayAgain from './wantsToPlayAgain'
 
 function newGame(): void {
   console.log("I have picked a whole number between 1 and 10 (inclusive).")
@@ -23,11 +24,4 @@ function newGame(): void {
   }
 }
 
-function wantsToPlayAgain(): boolean {
-  const userInput = prompt('Play again? [Y/N] \n> ')
-  return userInput.toUpperCase() === 'Y'
-}
-
-console.log("Welcome to: Guess the Number!")
-
-newGame()
+export default newGame
